@@ -2,7 +2,7 @@
 
 A Windows desktop application that captures screenshots of multiple URLs with a configurable browser viewport size. Built with WPF (.NET 10) and Microsoft.Playwright.
 
-<img width="1066" height="823" alt="image" src="https://github.com/user-attachments/assets/2b9f6ed8-d441-4f47-a8df-3d3f3edfed50" />
+<img width="1066" height="823" alt="image" src="https://github.com/user-attachments/assets/19eacda7-1734-4254-97c9-b3f8d81a9ed5" />
 
 ## Features
 
