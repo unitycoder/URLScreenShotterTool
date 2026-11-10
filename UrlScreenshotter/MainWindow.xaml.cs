@@ -444,7 +444,7 @@ public partial class MainWindow : Window
         string slug = Regex.Replace(uri.Host + uri.AbsolutePath.Replace('/', '_'), @"[^A-Za-z0-9._-]+", "_").Trim('_', '.');
         if (slug.Length > 70) slug = slug[..70];
         if (string.IsNullOrWhiteSpace(slug)) slug = "page";
-        string stem = $"{slug}_{width}x{height}";
+        string stem = slug;
         string path = Path.Combine(folder, stem + ".png");
         int suffix = 2;
         while (File.Exists(path)) path = Path.Combine(folder, $"{stem}_{suffix++}.png");
