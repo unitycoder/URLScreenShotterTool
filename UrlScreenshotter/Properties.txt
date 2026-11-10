@@ -1,0 +1,1 @@
+URL Screenshotter project: WPF (.NET 10) + Microsoft.Playwright.

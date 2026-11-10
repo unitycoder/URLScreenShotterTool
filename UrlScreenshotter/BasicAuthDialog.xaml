@@ -1,0 +1,35 @@
+<Window x:Class="UrlScreenshotter.BasicAuthDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HTTP Basic Authentication" Width="485" Height="315" MinWidth="420"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Background="{StaticResource BackgroundBrush}">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="This site requires HTTP Basic Authentication" FontWeight="SemiBold" FontSize="17" TextWrapping="Wrap" />
+        <TextBlock x:Name="OriginText" Grid.Row="1" Foreground="{StaticResource MutedBrush}" TextWrapping="Wrap" Margin="0,9,0,16" />
+        <StackPanel Grid.Row="2" Margin="0,0,0,9">
+            <TextBlock Text="Username" Margin="0,0,0,5" />
+            <TextBox x:Name="UsernameText" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" Margin="0,0,0,8">
+            <TextBlock Text="Password" Margin="0,0,0,5" />
+            <PasswordBox x:Name="PasswordInput" Background="{StaticResource FieldBrush}" Foreground="{StaticResource TextBrush}"
+                         BorderBrush="{StaticResource LineBrush}" Padding="9,7" />
+        </StackPanel>
+        <DockPanel Grid.Row="4" VerticalAlignment="Bottom" LastChildFill="False">
+            <TextBlock Text="Used only during this run. Not saved to disk." Foreground="{StaticResource MutedBrush}"
+                       FontSize="11" DockPanel.Dock="Left" VerticalAlignment="Center" />
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                <Button Content="Cancel" Click="Cancel_Click" Margin="0,0,8,0" />
+                <Button Content="Continue" Click="Confirm_Click" IsDefault="True" />
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
